@@ -1,6 +1,10 @@
 
 
-def decorador(func):
+def decorador(self, func):
     def wrapper(*args, **kwargs):
-        pass
+        square = self.num ** self.num_2
     return wrapper
+
+@decorador
+def verficar_operacion(result: int):
+    print(f"Es una operacion matematica {result}")
