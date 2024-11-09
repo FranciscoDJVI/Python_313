@@ -22,6 +22,7 @@ def positvo(func):
 @positvo
 @decorador
 def verficar_operacion():
+    
     num= 3
     num_2 = 7
     square  = num + num_2
