@@ -1,3 +1,5 @@
+import time
+
 def decorador(func):
     def wrapper(*args, **kwargs):
         result = func(*args, **kwargs)
@@ -19,6 +21,23 @@ def positvo(func):
             return result
     return wrapper
 
+
+def duration(func):
+    def wrapper(*args, **Kwargs):
+        
+        inicio = time.time()
+
+        result = func(*args, **Kwargs)
+
+        fin = time.time()
+
+        total_time = fin - inicio
+
+        print(f"Tiempo de ejecución {total_time}s")
+        return result
+    return wrapper
+
+@duration
 @positvo
 @decorador
 def verficar_operacion():
