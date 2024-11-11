@@ -1,5 +1,7 @@
 import time
 
+# PRACTICA DE DECORADORES.
+
 # Decorador para definir el tipo de una función.
 def decorador(func):
     def wrapper(*args, **kwargs):
