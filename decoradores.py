@@ -1,5 +1,6 @@
 import time
 
+# Decorador para definir el tipo de una función.
 def decorador(func):
     def wrapper(*args, **kwargs):
         result = func(*args, **kwargs)
@@ -10,7 +11,7 @@ def decorador(func):
         return result
     return wrapper
 
-
+# Decorador para definir si el resultado que retorna esa función es positivo.
 def positvo(func):
     def wrapper(*args, **kwargs):
             result = func(*args, **kwargs)
@@ -21,7 +22,7 @@ def positvo(func):
             return result
     return wrapper
 
-
+# Decorador para medir el tiempo de ejecucion de una función.
 def duration(func):
     def wrapper(*args, **Kwargs):
         
